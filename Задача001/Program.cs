@@ -10,9 +10,9 @@ double num2 = double.Parse(Console.ReadLine()!);
 
 if (num1 > num2)
 {
-    Console.WriteLine($"max = {num1}");
+    Console.WriteLine($"max = {num1} min = {num2}");
 }
 else
 {
-    Console.WriteLine($"max = {num2}");
+    Console.WriteLine($"max = {num2} min = {num1}");
 }
