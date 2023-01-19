@@ -8,14 +8,21 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.WriteLine("Введите число А: ");
+Console.Write("Введите число : ");
 double A = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите число В: ");
+Console.Write("Введите степень: ");
 double B = int.Parse(Console.ReadLine()!);
 Console.WriteLine($"Число {A} в степени {B} равно {GetDegree(A, B)}");
 
-double GetDegree (double A, double B)
+double GetDegree (double num, double rank)
 {
-    double num = Math.Pow(A, B);
-    return num;
+    if (B == 0) return 1;
+
+    double resualt = 1;
+    for (int i = 1; i <= rank; i++)
+    {
+        resualt *=num;
+    }
+    return resualt;
 }
+// Console.WriteLine();
